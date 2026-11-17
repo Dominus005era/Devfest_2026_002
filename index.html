@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevFest Prayagraj 2026 | The Triveni Sangam of Tech</title>
+  <meta name="description" content="Official website of DevFest Prayagraj 2026, hosted by GDG Prayagraj at MNNIT Prayagraj (MP Hall) on Dec 12, 2026. Discover AI, Cloud, Android, and Web at Northern India's premier developer conference.">
+  <link rel="icon" type="image/png" href="assets/icons/gdg.svg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            googleBlue: '#4285F4',
+            googleGreen: '#34A853',
+            googleYellow: '#FBBC04',
+            googleYellowDark: '#F9AB00',
+            googleRed: '#EA4335',
+            halftoneBlue: '#57CAFF',
+            halftoneGreen: '#5CDB6D',
+            pastelBlue: '#C3ECF6',
+            pastelGreen: '#CCF6C5',
+            pastelYellow: '#FFE7A5',
+            pastelRed: '#F8D8D8',
+            darkBorder: '#1E1E1E'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"Roboto Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Roboto Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Canvas Confetti CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+<body class="bg-[#F8F9FA] text-[#1E1E1E] antialiased min-h-screen flex flex-col">
+
+  <!-- 1. TOP LIVE TICKER / ANNOUNCEMENT BAR -->
+  <div class="bg-[#1E1E1E] text-white py-2 px-4 text-xs font-mono font-semibold flex items-center justify-between border-b-2 border-black z-50 sticky top-0">
+    <div class="flex items-center gap-3 overflow-hidden">
+      <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-red-600 text-[10px] font-black uppercase tracking-wider animate-pulse">
+        LIVE
+      </span>
+      <span class="truncate">
+        🔥 Registrations Open for <strong>DevFest Prayagraj 2026</strong> | Dec 12, 2026 @ MNNIT MP Hall | Early Bird Passes 50% Booked!
+      </span>
+    </div>
+    <div class="flex items-center gap-4 shrink-0 pl-3">
+      <button id="soundToggleBtn" class="flex items-center gap-1.5 hover:text-yellow-400 transition-colors text-[11px] bg-slate-800 px-2.5 py-1 rounded-md border border-slate-700" title="Toggle Interactive Audio FX">
+        <span class="sound-icon">🔊</span>
+        <span class="sound-text hidden sm:inline">Sound ON</span>
+      </button>
+      <a href="#tickets" class="hidden md:inline-flex items-center gap-1 text-yellow-400 hover:underline">
+        <span>Claim Pass</span>
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 2. MAIN NAVIGATION BAR -->
+  <header class="bg-white/95 backdrop-blur-md sticky top-[37px] z-40 border-b-2 border-[#1E1E1E] shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Lockup -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="h-10 sm:h-12 flex items-center">
+          <img src="assets/brand/logo-devfest-primary.png" alt="DevFest 2026" class="h-8 sm:h-10 w-auto object-contain">
+        </div>
+        <div class="border-l-2 border-[#1E1E1E] pl-2.5 flex flex-col justify-center">
+          <span class="font-black text-sm sm:text-base leading-none tracking-tight text-[#1E1E1E] group-hover:text-googleBlue transition-colors">
+            PRAYAGRAJ '26
+          </span>
+          <span class="text-[10px] font-mono font-bold text-slate-500 uppercase">
+            GDG Prayagraj
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden xl:flex items-center gap-6 text-xs font-bold font-mono tracking-tight text-slate-800">
+        <a href="#about" class="hover:text-googleBlue transition-colors py-1 border-b-2 border-transparent hover:border-googleBlue">ABOUT</a>
+        <a href="#tracks" class="hover:text-googleGreen transition-colors py-1 border-b-2 border-transparent hover:border-googleGreen">TRACKS</a>
+        <a href="#speakers" class="hover:text-googleYellowDark transition-colors py-1 border-b-2 border-transparent hover:border-googleYellowDark">SPEAKERS</a>
+        <a href="#schedule" class="hover:text-googleRed transition-colors py-1 border-b-2 border-transparent hover:border-googleRed">SCHEDULE</a>
+        <a href="#badge-studio" class="hover:text-googleBlue transition-colors py-1 border-b-2 border-transparent hover:border-googleBlue">BADGE STUDIO</a>
+        <a href="#prayagraj-guide" class="hover:text-googleGreen transition-colors py-1 border-b-2 border-transparent hover:border-googleGreen">PRAYAGRAJ GUIDE</a>
+        <a href="#play-zone" class="hover:text-googleYellowDark transition-colors py-1 border-b-2 border-transparent hover:border-googleYellowDark">PLAY ZONE</a>
+        <a href="#faqs" class="hover:text-slate-500 transition-colors py-1">FAQ</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <div class="flex items-center gap-3">
+        <a href="#tickets" class="neo-btn bg-googleYellow hover:bg-yellow-400 text-[#1E1E1E] font-black text-xs sm:text-sm px-4 sm:px-6 py-2.5 rounded-xl flex items-center gap-1.5 shadow-[3px_3px_0px_#1E1E1E]">
+          <span>GET PASSES</span>
+          <span>🎟️</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileMenuToggle" class="xl:hidden p-2 rounded-xl border-2 border-[#1E1E1E] bg-slate-100 hover:bg-slate-200" aria-label="Toggle Navigation">
+          <svg class="w-6 h-6 text-[#1E1E1E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer (Hidden by default) -->
+  <div id="mobileMenu" class="fixed inset-0 z-50 bg-[#1E1E1E]/70 backdrop-blur-sm hidden flex justify-end">
+    <div class="w-4/5 max-w-sm bg-white h-full border-l-4 border-black p-6 flex flex-col justify-between overflow-y-auto">
+      <div>
+        <div class="flex justify-between items-center pb-4 border-b-2 border-black mb-6">
+          <div class="font-black text-lg text-slate-900">DEVFEST PRAYAGRAJ</div>
+          <button id="closeMobileMenu" class="w-8 h-8 rounded-full border-2 border-black bg-red-500 text-white font-bold flex items-center justify-center">✕</button>
+        </div>
+        <nav class="flex flex-col gap-4 font-mono font-bold text-sm">
+          <a href="#about" class="mobile-nav-link p-2 rounded-lg hover:bg-blue-50 hover:text-googleBlue">🌊 About Sangam Confluence</a>
+          <a href="#tracks" class="mobile-nav-link p-2 rounded-lg hover:bg-green-50 hover:text-googleGreen">⚡ 4 Technical Tracks</a>
+          <a href="#speakers" class="mobile-nav-link p-2 rounded-lg hover:bg-amber-50 hover:text-googleYellowDark">🎤 Rockstar Speakers</a>
+          <a href="#schedule" class="mobile-nav-link p-2 rounded-lg hover:bg-red-50 hover:text-googleRed">📅 Full Schedule</a>
+          <a href="#badge-studio" class="mobile-nav-link p-2 rounded-lg hover:bg-blue-50 hover:text-googleBlue">🏷️ Interactive Badge Studio</a>
+          <a href="#prayagraj-guide" class="mobile-nav-link p-2 rounded-lg hover:bg-green-50 hover:text-googleGreen">📍 Prayagraj Venue & City Guide</a>
+          <a href="#play-zone" class="mobile-nav-link p-2 rounded-lg hover:bg-amber-50 hover:text-googleYellowDark">🎮 Sangam Play Zone</a>
+          <a href="#tickets" class="mobile-nav-link p-2 rounded-lg hover:bg-red-50 hover:text-googleRed">🎟️ Passes & Registration</a>
+          <a href="#team" class="mobile-nav-link p-2 rounded-lg hover:bg-slate-100">👥 GDG Prayagraj Team</a>
+          <a href="#faqs" class="mobile-nav-link p-2 rounded-lg hover:bg-slate-100">❓ Frequently Asked Questions</a>
+        </nav>
+      </div>
+      <div class="pt-6 border-t-2 border-black">
+        <a href="#tickets" class="mobile-nav-link block text-center w-full bg-googleYellow border-2 border-black font-black py-3 rounded-xl shadow-[3px_3px_0px_#1E1E1E]">
+          CLAIM YOUR PASS NOW
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main class="flex-grow">
+    
+    <!-- 3. HERO SECTION (THE TRIVENI SANGAM OF TECH) -->
+    <section class="relative pt-10 pb-16 md:py-20 overflow-hidden border-b-2 border-[#1E1E1E]">
+      <!-- Background Decorative Elements -->
+      <div class="absolute -top-12 -left-12 w-64 h-64 bg-pastelBlue rounded-full opacity-60 filter blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 -right-12 w-80 h-80 bg-pastelYellow rounded-full opacity-50 filter blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-16 left-1/3 w-96 h-96 bg-pastelGreen rounded-full opacity-40 filter blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Top Pill Tag -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border-2 border-[#1E1E1E] shadow-[3px_3px_0px_#1E1E1E] text-xs font-mono font-bold text-slate-800">
+            <span class="w-2.5 h-2.5 rounded-full bg-googleBlue animate-ping"></span>
+            <span>GDG PRAYAGRAJ PRESENTS</span>
+            <span class="text-slate-300">•</span>
+            <span>ANNUAL FLAGSHIP CONFERENCE</span>
+          </div>
+          <div class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-googleYellow/30 border border-slate-900 text-xs font-mono font-bold text-slate-900">
+            📍 MNNIT Prayagraj (MP Hall)
+          </div>
+        </div>
+
+        <!-- Main Hero Title -->
+        <div class="text-center max-w-4xl mx-auto mb-8">
+          <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.95] text-[#1E1E1E] mb-4">
+            DEVFEST <span class="text-googleBlue relative inline-block">
+              PRAYAGRAJ
+              <!-- Wavy underline SVG -->
+              <svg class="absolute -bottom-2 left-0 w-full h-3 text-googleYellow" viewBox="0 0 200 12" fill="none" preserveAspectRatio="none"><path d="M0 6 Q 25 0 50 6 T 100 6 T 150 6 T 200 6" stroke="currentColor" stroke-width="4" fill="none"/></svg>
+            </span>
+            <span class="text-googleRed">2026</span>
+          </h1>
+
+          <p class="text-base sm:text-xl md:text-2xl font-bold text-slate-700 max-w-2xl mx-auto leading-relaxed mt-4">
+            The <span class="bg-pastelYellow px-2 py-0.5 rounded border border-black font-extrabold">Triveni Sangam of Tech</span>: Where <strong class="text-googleBlue">Code</strong>, <strong class="text-googleGreen">Community</strong>, & <strong class="text-googleRed">Intelligence</strong> Converge.
+          </p>
+        </div>
+
+        <!-- Animated Illustrated Bridge & Confluence Visual -->
+        <div class="max-w-4xl mx-auto mb-10 bg-white rounded-3xl border-3 border-[#1E1E1E] shadow-[8px_8px_0px_#1E1E1E] overflow-hidden p-2 sm:p-4 relative transition-transform" id="heroBridgeGraphic">
+          <div class="relative rounded-2xl overflow-hidden border-2 border-slate-900">
+            <!-- Animated SVG of New Yamuna Bridge & Sangam Boat -->
+            <img src="assets/prayagraj/bridge.svg" alt="New Yamuna Cable Bridge at Triveni Sangam" class="w-full h-auto object-cover">
+            
+            <!-- Floating Badge Overlays -->
+            <div class="absolute top-4 left-4 hidden sm:flex items-center gap-2 bg-white/95 px-3 py-1.5 rounded-xl border-2 border-black shadow-[2px_2px_0px_#1E1E1E] text-xs font-mono font-bold">
+              <span class="w-2 h-2 rounded-full bg-green-500"></span>
+              <span>NEW YAMUNA CABLE BRIDGE</span>
+            </div>
+
+            <div class="absolute bottom-4 right-4 hidden sm:flex items-center gap-2 bg-white/95 px-3 py-1.5 rounded-xl border-2 border-black shadow-[2px_2px_0px_#1E1E1E] text-xs font-mono font-bold">
+              <span>TRIVENI SANGAM WATERWAYS</span>
+              <span>🌊</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COUNTDOWN TIMER TO DEC 12, 2026 -->
+        <div class="max-w-2xl mx-auto mb-10">
+          <div class="text-center font-mono font-bold text-xs uppercase tracking-widest text-slate-500 mb-2">
+            COUNTDOWN TO DEV CONFLUENCE • DEC 12, 2026
+          </div>
+          <div class="grid grid-cols-4 gap-2 sm:gap-4 text-center">
+            <div class="bg-white p-3 sm:p-4 rounded-2xl border-2 border-black shadow-[3px_3px_0px_#4285F4]">
+              <span id="countDays" class="block font-black text-2xl sm:text-4xl text-googleBlue font-mono">00</span>
+              <span class="text-[10px] sm:text-xs font-bold font-mono text-slate-500">DAYS</span>
+            </div>
+            <div class="bg-white p-3 sm:p-4 rounded-2xl border-2 border-black shadow-[3px_3px_0px_#34A853]">
+              <span id="countHours" class="block font-black text-2xl sm:text-4xl text-googleGreen font-mono">00</span>
+              <span class="text-[10px] sm:text-xs font-bold font-mono text-slate-500">HOURS</span>
+            </div>
+            <div class="bg-white p-3 sm:p-4 rounded-2xl border-2 border-black shadow-[3px_3px_0px_#FBBC04]">
+              <span id="countMins" class="block font-black text-2xl sm:text-4xl text-googleYellowDark font-mono">00</span>
+              <span class="text-[10px] sm:text-xs font-bold font-mono text-slate-500">MINUTES</span>
+            </div>
+            <div class="bg-white p-3 sm:p-4 rounded-2xl border-2 border-black shadow-[3px_3px_0px_#EA4335]">
+              <span id="countSecs" class="block font-black text-2xl sm:text-4xl text-googleRed font-mono">00</span>
+              <span class="text-[10px] sm:text-xs font-bold font-mono text-slate-500">SECONDS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+          <a href="#tickets" class="w-full sm:w-auto text-center neo-btn bg-googleYellow hover:bg-yellow-400 text-slate-900 font-black text-base px-8 py-4 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#1E1E1E] transition-all flex items-center justify-center gap-2">
+            <span>CLAIM YOUR PASS</span>
+            <span class="text-xl">🎟️</span>
+          </a>
+          <a href="#badge-studio" class="w-full sm:w-auto text-center neo-btn bg-white hover:bg-slate-50 text-slate-900 font-extrabold text-base px-8 py-4 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#4285F4] transition-all flex items-center justify-center gap-2">
+            <span>GENERATE PROFILE BADGE</span>
+            <span class="text-xl">🏷️</span>
+          </a>
+          <a href="#schedule" class="w-full sm:w-auto text-center neo-btn bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-base px-6 py-4 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#1E1E1E] transition-all flex items-center justify-center gap-2">
+            <span>AGENDA</span>
+            <span>📅</span>
+          </a>
+        </div>
+
+        <!-- Community Numbers Banner -->
+        <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div class="bg-white p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#1E1E1E]">
+            <div class="text-3xl sm:text-4xl font-black text-googleBlue font-mono mb-1">1,200+</div>
+            <div class="text-xs font-bold text-slate-600">Attendees & Builders</div>
+          </div>
+          <div class="bg-white p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#1E1E1E]">
+            <div class="text-3xl sm:text-4xl font-black text-googleGreen font-mono mb-1">25+</div>
+            <div class="text-xs font-bold text-slate-600">Rockstar Speakers</div>
+          </div>
+          <div class="bg-white p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#1E1E1E]">
+            <div class="text-3xl sm:text-4xl font-black text-googleYellowDark font-mono mb-1">18+</div>
+            <div class="text-xs font-bold text-slate-600">Sessions & Codelabs</div>
+          </div>
+          <div class="bg-white p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#1E1E1E]">
+            <div class="text-3xl sm:text-4xl font-black text-googleRed font-mono mb-1">₹2.5L+</div>
+            <div class="text-xs font-bold text-slate-600">Swag, Perks & Awards</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. CONTINUOUS MARQUEE RIBBON -->
+    <div class="bg-googleYellow border-y-2 border-black py-3 overflow-hidden font-mono font-black text-xs sm:text-sm text-slate-900 tracking-wider">
+      <div class="marquee-container">
+        <div class="marquee-content flex gap-8 items-center">
+          <span>✨ GOOGLE GEMINI 2.0</span>
+          <span>•</span>
+          <span>🤖 ANDROID 15 & JETPACK COMPOSE</span>
+          <span>•</span>
+          <span>☁️ GOOGLE CLOUD PLATFORM & K8S</span>
+          <span>•</span>
+          <span>💙 FLUTTER & DART 3.X</span>
+          <span>•</span>
+          <span>🌊 TRIVENI SANGAM OF TECH</span>
+          <span>•</span>
+          <span>🌉 NEW YAMUNA CABLE BRIDGE</span>
+          <span>•</span>
+          <span>📍 MNNIT GRAND AUDITORIUM PRAYAGRAJ</span>
+          <span>•</span>
+          <span>⚡ WEBGPU & CHROME AI</span>
+          <span>•</span>
+          <span>🔥 FIREBASE GEN 2</span>
+          <span>•</span>
+        </div>
+        <div class="marquee-content flex gap-8 items-center" aria-hidden="true">
+          <span>✨ GOOGLE GEMINI 2.0</span>
+          <span>•</span>
+          <span>🤖 ANDROID 15 & JETPACK COMPOSE</span>
+          <span>•</span>
+          <span>☁️ GOOGLE CLOUD PLATFORM & K8S</span>
+          <span>•</span>
+          <span>💙 FLUTTER & DART 3.X</span>
+          <span>•</span>
+          <span>🌊 TRIVENI SANGAM OF TECH</span>
+          <span>•</span>
+          <span>🌉 NEW YAMUNA CABLE BRIDGE</span>
+          <span>•</span>
+          <span>📍 MNNIT GRAND AUDITORIUM PRAYAGRAJ</span>
+          <span>•</span>
+          <span>⚡ WEBGPU & CHROME AI</span>
+          <span>•</span>
+          <span>🔥 FIREBASE GEN 2</span>
+          <span>•</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. ABOUT PRAYAGRAJ CONFLUENCE SECTION -->
+    <section id="about" class="py-20 bg-white border-b-2 border-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 bg-pastelBlue text-blue-900 border border-black rounded-full text-xs font-mono font-bold mb-3">
+            REGIONAL ESSENCE & VISION
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+            The Confluence of Wisdom & Cutting-Edge Code
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            For millennia, Prayagraj has stood as the sacred confluence point of ancient rivers and philosophical thought—earning the distinction of the <em>"Oxford of the East"</em>. In 2026, <strong>GDG Prayagraj</strong> channels this majestic heritage into India's most vibrant developer gathering.
+          </p>
+        </div>
+
+        <!-- 3-Stream Confluence Infographic Card -->
+        <div class="bg-[#F8F9FA] rounded-3xl border-3 border-black shadow-[8px_8px_0px_#1E1E1E] p-6 md:p-10 mb-16">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-6 space-y-6">
+              <div class="inline-block px-3 py-1 bg-yellow-300 text-black border border-black rounded-lg text-xs font-mono font-bold">
+                THE THREE SACRED STREAMS
+              </div>
+              <h3 class="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">
+                Where Ganga, Yamuna & Saraswati Manifest as Modern Technology
+              </h3>
+
+              <div class="space-y-4">
+                <div class="flex gap-4 p-4 rounded-2xl bg-white border-2 border-black shadow-[3px_3px_0px_#34A853]">
+                  <div class="w-10 h-10 rounded-xl bg-green-100 border border-black flex items-center justify-center text-xl shrink-0">
+                    🌊
+                  </div>
+                  <div>
+                    <h4 class="font-black text-base text-slate-900">Ganga: The Stream of Community</h4>
+                    <p class="text-xs text-slate-600 mt-1">
+                      Nurturing, inclusive, and empowering thousands of campus developers from MNNIT, IIIT Allahabad, and regional institutions into global software leaders.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4 p-4 rounded-2xl bg-white border-2 border-black shadow-[3px_3px_0px_#4285F4]">
+                  <div class="w-10 h-10 rounded-xl bg-blue-100 border border-black flex items-center justify-center text-xl shrink-0">
+                    ⚡
+                  </div>
+                  <div>
+                    <h4 class="font-black text-base text-slate-900">Yamuna: The Stream of Code & Cloud</h4>
+                    <p class="text-xs text-slate-600 mt-1">
+                      Deep, resilient, and architected for enterprise hyperscale with Google Cloud, Kubernetes, and Android engineering.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex gap-4 p-4 rounded-2xl bg-white border-2 border-black shadow-[3px_3px_0px_#FBBC04]">
+                  <div class="w-10 h-10 rounded-xl bg-yellow-100 border border-black flex items-center justify-center text-xl shrink-0">
+                    ✨
+                  </div>
+                  <div>
+                    <h4 class="font-black text-base text-slate-900">Saraswati: The Stream of AI & Knowledge</h4>
+                    <p class="text-xs text-slate-600 mt-1">
+                      The mystical undercurrent of intellectual illumination—powering Google Gemini 2.0, Deep Learning, and frontier research.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 flex justify-center">
+              <div class="w-full max-w-md bg-white p-4 rounded-2xl border-2 border-black shadow-[6px_6px_0px_#1E1E1E]">
+                <img src="assets/prayagraj/sangam-confluence.svg" alt="Triveni Sangam Tech Confluence" class="w-full h-auto object-contain">
+                <div class="text-center font-mono font-bold text-xs text-slate-600 mt-3 pt-3 border-t border-slate-200">
+                  CONFLUENCE ARCHITECTURE • PRAYAGRAJ 2026
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 4 Core Event Pillars -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-6 bg-white rounded-2xl border-2 border-black shadow-[4px_4px_0px_#4285F4] hover:-translate-y-1 transition-transform">
+            <div class="text-3xl mb-3">🎓</div>
+            <h4 class="font-black text-lg text-slate-900 mb-1">Deep Learning</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Step into advanced Codelabs led directly by Google Developer Experts and industry veterans.
+            </p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl border-2 border-black shadow-[4px_4px_0px_#34A853] hover:-translate-y-1 transition-transform">
+            <div class="text-3xl mb-3">🤝</div>
+            <h4 class="font-black text-lg text-slate-900 mb-1">Peer Convergence</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Forge lifelong bonds with 1,200+ founders, student pioneers, and senior engineering architects.
+            </p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl border-2 border-black shadow-[4px_4px_0px_#FBBC04] hover:-translate-y-1 transition-transform">
+            <div class="text-3xl mb-3">🚀</div>
+            <h4 class="font-black text-lg text-slate-900 mb-1">Career Launchpad</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Direct access to top tech recruiters, startup founders, and open-source grant advisors.
+            </p>
+          </div>
+          <div class="p-6 bg-white rounded-2xl border-2 border-black shadow-[4px_4px_0px_#EA4335] hover:-translate-y-1 transition-transform">
+            <div class="text-3xl mb-3">🎁</div>
+            <h4 class="font-black text-lg text-slate-900 mb-1">Authentic Swag</h4>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Collect exclusive DevFest Prayagraj collectible shirts, laptop stickers, and verifiable credentials.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. 4 CORE TECH TRACKS -->
+    <section id="tracks" class="py-20 bg-[#F8F9FA] border-b-2 border-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 bg-pastelGreen text-green-900 border border-black rounded-full text-xs font-mono font-bold mb-3">
+            CURATED TECHNICAL TRACKS
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+            Four Streams of Next-Gen Engineering
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            From autonomous foundation model agents to sub-second mobile runtimes, DevFest Prayagraj covers the entire spectrum of developer innovation.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Track 1: AI & ML -->
+          <div class="bg-white rounded-3xl border-3 border-black shadow-[6px_6px_0px_#4285F4] p-6 flex flex-col justify-between hover:-translate-y-1 transition-all">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 border border-blue-400 rounded-full text-[11px] font-mono font-bold">
+                  TRACK 01
+                </span>
+                <span class="w-10 h-10 rounded-xl bg-blue-50 border-2 border-black flex items-center justify-center text-xl">
+                  🤖
+                </span>
+              </div>
+              <h3 class="text-2xl font-black text-slate-900 mb-1">AI & Gemini</h3>
+              <p class="text-xs font-bold text-googleBlue mb-3">Multimodal Agents & Vertex AI</p>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Dive deep into Gemini 2.0 Flash, function calling, tool use, Gemma on-device inference, and production LLMOps.
+              </p>
+            </div>
+            <div class="pt-4 border-t-2 border-slate-100 space-y-1.5">
+              <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">CORE TOPICS:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-semibold text-slate-700">Gemini 2.0</span>
+                <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-semibold text-slate-700">Vertex AI</span>
+                <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-semibold text-slate-700">Agentic Tools</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Track 2: Cloud & DevOps -->
+          <div class="bg-white rounded-3xl border-3 border-black shadow-[6px_6px_0px_#34A853] p-6 flex flex-col justify-between hover:-translate-y-1 transition-all">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <span class="px-3 py-1 bg-green-100 text-green-800 border border-green-400 rounded-full text-[11px] font-mono font-bold">
+                  TRACK 02
+                </span>
+                <span class="w-10 h-10 rounded-xl bg-green-50 border-2 border-black flex items-center justify-center text-xl">
+                  ☁️
+                </span>
+              </div>
+              <h3 class="text-2xl font-black text-slate-900 mb-1">Google Cloud</h3>
+              <p class="text-xs font-bold text-googleGreen mb-3">Serverless, GKE & Scale</p>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Master modern microservices, Cloud Run autoscaling, zero-trust cloud security, and resilient event architectures.
+              </p>
+            </div>
+            <div class="pt-4 border-t-2 border-slate-100 space-y-1.5">
+              <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">CORE TOPICS:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-semibold text-slate-700">Cloud Run</span>
+                <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-semibold text-slate-700">GKE K8s</span>
+                <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-semibold text-slate-700">Firebase Gen 2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Track 3: Mobile & Multiplatform -->
+          <div class="bg-white rounded-3xl border-3 border-black shadow-[6px_6px_0px_#FBBC04] p-6 flex flex-col justify-between hover:-translate-y-1 transition-all">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 border border-yellow-400 rounded-full text-[11px] font-mono font-bold">
+                  TRACK 03
+                </span>
+                <span class="w-10 h-10 rounded-xl bg-yellow-50 border-2 border-black flex items-center justify-center text-xl">
+                  📱
+                </span>
+              </div>
+              <h3 class="text-2xl font-black text-slate-900 mb-1">Android & Flutter</h3>
+              <p class="text-xs font-bold text-googleYellowDark mb-3">Impeller, Compose & KMP</p>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Craft hardware-accelerated 120Hz interfaces with Flutter 3.x Impeller and modern declarative Jetpack Compose.
+              </p>
+            </div>
+            <div class="pt-4 border-t-2 border-slate-100 space-y-1.5">
+              <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">CORE TOPICS:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-semibold text-slate-700">Flutter 3.x</span>
+                <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-semibold text-slate-700">Jetpack Compose</span>
+                <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-semibold text-slate-700">Android 15</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Track 4: Modern Web -->
+          <div class="bg-white rounded-3xl border-3 border-black shadow-[6px_6px_0px_#EA4335] p-6 flex flex-col justify-between hover:-translate-y-1 transition-all">
+            <div>
+              <div class="flex justify-between items-start mb-4">
+                <span class="px-3 py-1 bg-red-100 text-red-800 border border-red-400 rounded-full text-[11px] font-mono font-bold">
+                  TRACK 04
+                </span>
+                <span class="w-10 h-10 rounded-xl bg-red-50 border-2 border-black flex items-center justify-center text-xl">
+                  🌐
+                </span>
+              </div>
+              <h3 class="text-2xl font-black text-slate-900 mb-1">Web & Chrome</h3>
+              <p class="text-xs font-bold text-googleRed mb-3">WebGPU, WASM & Client AI</p>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Explore browser built-in AI APIs, WebAssembly compute engines, island architectures, and next-gen Core Web Vitals.
+              </p>
+            </div>
+            <div class="pt-4 border-t-2 border-slate-100 space-y-1.5">
+              <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">CORE TOPICS:</span>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-semibold text-slate-700">Chrome Built-in AI</span>
+                <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-semibold text-slate-700">WebGPU</span>
+                <span class="px-2 py-0.5 bg-slate-100 rounded text-[10px] font-semibold text-slate-700">WASM Runtime</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. ROCKSTAR SPEAKERS SECTION -->
+    <section id="speakers" class="py-20 bg-white border-b-2 border-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 bg-pastelYellow text-yellow-900 border border-black rounded-full text-xs font-mono font-bold mb-3">
+            INDUSTRY TITANS & EXPERTS
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+            Learn from Leading Architects & GDEs
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            Our speaker bench features Google Developer Advocates, Google Developer Experts (GDEs), professors from IIIT Allahabad, and principal systems engineers.
+          </p>
+        </div>
+
+        <!-- Speaker Cards Grid (Populated dynamically by main.js) -->
+        <div id="speakersContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Call for Lightning Talks Banner -->
+        <div class="bg-pastelBlue border-2 border-black rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-[6px_6px_0px_#1E1E1E]">
+          <div class="space-y-1 text-center md:text-left">
+            <span class="px-2.5 py-0.5 bg-blue-600 text-white font-mono font-bold text-[10px] rounded uppercase">COMMUNITY STAGE</span>
+            <h3 class="text-2xl font-black text-slate-900">Have an open source project to showcase?</h3>
+            <p class="text-xs sm:text-sm text-slate-700">
+              Apply for our 10-minute Community Lightning Talk sessions in Hall B. Submissions close Dec 1, 2026.
+            </p>
+          </div>
+          <a href="https://sessionize.com" target="_blank" rel="noopener" class="neo-btn bg-white hover:bg-slate-50 text-slate-900 font-black px-6 py-3 rounded-xl border-2 border-black text-sm shrink-0">
+            Submit Your Talk (CFP) →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. INTERACTIVE MULTI-TRACK AGENDA & SCHEDULE -->
+    <section id="schedule" class="py-20 bg-[#F8F9FA] border-b-2 border-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-3 py-1 bg-pastelRed text-red-900 border border-black rounded-full text-xs font-mono font-bold mb-3">
+            FULL DAY TIMELINE • DEC 12, 2026
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+            Conference Agenda & Breakouts
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            Experience simultaneous keynotes, technical deep dives, and hands-on workshops across our specialized halls at MNNIT Campus.
+          </p>
+        </div>
+
+        <!-- Filter Controls & Search Bar -->
+        <div class="bg-white p-4 sm:p-6 rounded-3xl border-2 border-black shadow-[6px_6px_0px_#1E1E1E] mb-8 flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+          
+          <!-- Track Buttons -->
+          <div class="flex flex-wrap items-center gap-2">
+            <button class="schedule-track-btn px-4 py-2 rounded-xl text-xs font-mono font-bold border-2 border-black bg-black text-white shadow-[3px_3px_0px_#4285F4] transition-all" data-track="all">
+              ALL TRACKS
+            </button>
+            <button class="schedule-track-btn px-4 py-2 rounded-xl text-xs font-mono font-bold border-2 border-black bg-white text-slate-700 hover:bg-slate-50 transition-all" data-track="ai">
+              🤖 AI & ML
+            </button>
+            <button class="schedule-track-btn px-4 py-2 rounded-xl text-xs font-mono font-bold border-2 border-black bg-white text-slate-700 hover:bg-slate-50 transition-all" data-track="cloud">
+              ☁️ CLOUD
+            </button>
+            <button class="schedule-track-btn px-4 py-2 rounded-xl text-xs font-mono font-bold border-2 border-black bg-white text-slate-700 hover:bg-slate-50 transition-all" data-track="mobile">
+              📱 MOBILE
+            </button>
+            <button class="schedule-track-btn px-4 py-2 rounded-xl text-xs font-mono font-bold border-2 border-black bg-white text-slate-700 hover:bg-slate-50 transition-all" data-track="web">
+              🌐 WEB
+            </button>
+          </div>
+
+          <!-- Search & Starred Filter -->
+          <div class="flex items-center gap-3">
+            <div class="relative flex-1 sm:w-64">
+              <input type="text" id="scheduleSearchInput" placeholder="Search sessions, speakers..." class="w-full pl-9 pr-3 py-2 bg-slate-50 border-2 border-black rounded-xl text-xs font-bold text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <svg class="w-4 h-4 text-slate-400 absolute left-3 top-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <button id="starredFilterBtn" class="px-3.5 py-2 rounded-xl border-2 border-black bg-white hover:bg-yellow-100 text-slate-800 text-xs font-mono font-bold flex items-center gap-1.5 transition-all" title="View Bookmarked Sessions">
+              <span>⭐</span>
+              <span class="hidden sm:inline">Saved</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Session Cards Container (Populated dynamically) -->
+        <div id="scheduleContainer" class="space-y-4">
+          <!-- Populated by schedule.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. INTERACTIVE DEVFEST BADGE STUDIO (THE KOLKATA & AHMEDABAD FAVORITE!) -->
+    <section id="badge-studio" class="py-20 bg-white border-b-2 border-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 bg-pastelBlue text-blue-900 border border-black rounded-full text-xs font-mono font-bold mb-3">
+            INTERACTIVE CREATOR STUDIO
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+            Generate Your DevFest Prayagraj Pass
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            Customize your personalized digital attendee badge with official DevFest 2026 frames and regional Prayagraj Sangam motifs. Download in high-res and share across LinkedIn and X!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left: Controls Form -->
+          <div class="lg:col-span-5 bg-[#F8F9FA] p-6 sm:p-8 rounded-3xl border-3 border-black shadow-[6px_6px_0px_#1E1E1E]">
+            <h3 class="text-xl font-black text-slate-900 mb-6 flex items-center gap-2">
+              <span>⚙️</span>
+              <span>Badge Customizer</span>
+            </h3>
+
+            <div class="space-y-4">
+              
+              <!-- Full Name -->
+              <div>
+                <label class="block text-xs font-mono font-bold text-slate-700 uppercase mb-1">Your Full Name</label>
+                <input type="text" id="badgeNameInput" value="Rahul Sharma" class="w-full px-4 py-2.5 bg-white border-2 border-black rounded-xl text-sm font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+
+              <!-- Role Selector -->
+              <div>
+                <label class="block text-xs font-mono font-bold text-slate-700 uppercase mb-1">Badge Role</label>
+                <select id="badgeRoleSelect" class="w-full px-4 py-2.5 bg-white border-2 border-black rounded-xl text-sm font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option value="Attendee">Attendee</option>
+                  <option value="Student Innovator">Student Innovator</option>
+                  <option value="Speaker">Speaker</option>
+                  <option value="Organizer">Organizer</option>
+                  <option value="Volunteer">Volunteer</option>
+                  <option value="AI Champion">AI Champion</option>
+                  <option value="Cloud Architect">Cloud Architect</option>
+                </select>
+              </div>
+
+              <!-- Track Affiliation -->
+              <div>
+                <label class="block text-xs font-mono font-bold text-slate-700 uppercase mb-1">Primary Track Affinity</label>
+                <select id="badgeTrackSelect" class="w-full px-4 py-2.5 bg-white border-2 border-black rounded-xl text-sm font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option value="ai">🤖 AI & Machine Learning (Google Blue)</option>
+                  <option value="cloud">☁️ Google Cloud & DevOps (Google Green)</option>
+                  <option value="mobile">📱 Mobile & Flutter (Google Yellow)</option>
+                  <option value="web">🌐 Modern Web & Chrome (Google Red)</option>
+                </select>
+              </div>
+
+              <!-- Organization / College -->
+              <div>
+                <label class="block text-xs font-mono font-bold text-slate-700 uppercase mb-1">Institution / Company</label>
+                <input type="text" id="badgeOrgInput" value="MNNIT Prayagraj" class="w-full px-4 py-2.5 bg-white border-2 border-black rounded-xl text-sm font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+
+              <!-- Frame Motif Style -->
+              <div>
+                <label class="block text-xs font-mono font-bold text-slate-700 uppercase mb-1">Badge Frame Motif</label>
+                <select id="badgeFrameSelect" class="w-full px-4 py-2.5 bg-white border-2 border-black rounded-xl text-sm font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option value="sangam">🌊 Prayagraj Sangam Heritage Edition</option>
+                  <option value="official">🎯 DevFest 2026 Neo-Brutalist Core</option>
+                </select>
+              </div>
+
+              <!-- Photo Upload & Scale Slider -->
+              <div>
+                <label class="block text-xs font-mono font-bold text-slate-700 uppercase mb-1">Upload Your Picture</label>
+                <input type="file" id="badgePhotoUpload" accept="image/*" class="w-full text-xs text-slate-500 file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-2 file:border-black file:text-xs file:font-bold file:bg-white file:text-slate-900 hover:file:bg-slate-100 cursor-pointer">
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs font-mono font-bold text-slate-600 mb-1">
+                  <span>Zoom / Scale Photo</span>
+                  <span>🔍</span>
+                </div>
+                <input type="range" id="badgeScaleSlider" min="0.5" max="2.5" step="0.05" value="1.0" class="w-full accent-blue-600">
+              </div>
+
+              <!-- Instant Presets -->
+              <div>
+                <label class="block text-xs font-mono font-bold text-slate-700 uppercase mb-2">Or Pick an Instant Developer Avatar:</label>
+                <div class="flex items-center gap-2">
+                  <button type="button" class="avatar-preset-btn w-10 h-10 rounded-full border-2 border-black overflow-hidden bg-slate-100 hover:scale-110 transition-transform" data-src="assets/speakers/nikita-gandhi.svg" title="Avatar 1">
+                    <img src="assets/speakers/nikita-gandhi.svg" alt="Preset 1" class="w-full h-full object-cover">
+                  </button>
+                  <button type="button" class="avatar-preset-btn w-10 h-10 rounded-full border-2 border-black overflow-hidden bg-slate-100 hover:scale-110 transition-transform" data-src="assets/speakers/kartik-derasari.svg" title="Avatar 2">
+                    <img src="assets/speakers/kartik-derasari.svg" alt="Preset 2" class="w-full h-full object-cover">
+                  </button>
+                  <button type="button" class="avatar-preset-btn w-10 h-10 rounded-full border-2 border-black overflow-hidden bg-slate-100 hover:scale-110 transition-transform" data-src="assets/speakers/pooja-bhaumik.svg" title="Avatar 3">
+                    <img src="assets/speakers/pooja-bhaumik.svg" alt="Preset 3" class="w-full h-full object-cover">
+                  </button>
+                  <button type="button" class="avatar-preset-btn w-10 h-10 rounded-full border-2 border-black overflow-hidden bg-slate-100 hover:scale-110 transition-transform" data-src="assets/speakers/sayak-paul.svg" title="Avatar 4">
+                    <img src="assets/speakers/sayak-paul.svg" alt="Preset 4" class="w-full h-full object-cover">
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right: Live Canvas Preview & Download Action -->
+          <div class="lg:col-span-7 flex flex-col items-center">
+            
+            <div class="w-full max-w-sm sm:max-w-md bg-slate-100 p-4 rounded-3xl border-3 border-black shadow-[8px_8px_0px_#1E1E1E] flex justify-center mb-6">
+              <canvas id="badgeCanvas" width="800" height="1000" class="w-full h-auto"></canvas>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap gap-4 justify-center">
+              <button id="downloadBadgeBtn" class="neo-btn bg-googleGreen hover:bg-green-600 text-white font-black text-sm px-6 py-3.5 rounded-xl border-2 border-black shadow-[4px_4px_0px_#1E1E1E] flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>DOWNLOAD BADGE (PNG)</span>
+              </button>
+              <button id="shareBadgeBtn" class="neo-btn bg-white hover:bg-slate-50 text-slate-900 font-extrabold text-sm px-6 py-3.5 rounded-xl border-2 border-black shadow-[4px_4px_0px_#4285F4] flex items-center gap-2">
+                <span>SHARE ON 𝕏 / LINKEDIN</span>
+                <span>🚀</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. INTERACTIVE PLAY ZONE (MINI-GAME & VIRTUAL LAPTOP STICKER BOARD) -->
+    <section id="play-zone" class="py-20 bg-[#F8F9FA] border-b-2 border-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 bg-pastelYellow text-yellow-900 border border-black rounded-full text-xs font-mono font-bold mb-3">
+            INTERACTIVE COMMUNITY EXPERIENCES
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+            DevFest Interactive Play Zone
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            Test your reflexes in our arcade mini-game or customize your dream developer laptop with official DevFest 2026 role stickers!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          
+          <!-- Game Section: Sangam Catcher -->
+          <div class="lg:col-span-7 bg-white rounded-3xl border-3 border-black shadow-[8px_8px_0px_#1E1E1E] p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-4 border-b-2 border-black mb-4">
+                <div>
+                  <span class="text-[10px] font-mono font-bold text-blue-600 uppercase">BROWSER MINI-GAME</span>
+                  <h3 class="text-xl font-black text-slate-900">🌊 Sangam Tech Catcher</h3>
+                </div>
+                <!-- HUD Stats -->
+                <div class="flex items-center gap-3 font-mono font-bold text-xs">
+                  <div class="bg-slate-100 px-3 py-1.5 rounded-lg border border-black">
+                    SCORE: <span id="gameScoreDisplay" class="text-blue-600 font-black">0</span>
+                  </div>
+                  <div class="bg-slate-100 px-3 py-1.5 rounded-lg border border-black">
+                    TIME: <span id="gameTimerDisplay" class="text-red-600 font-black">45s</span>
+                  </div>
+                  <div class="bg-slate-100 px-3 py-1.5 rounded-lg border border-black hidden sm:block">
+                    HIGH: <span id="gameHighScoreDisplay" class="text-green-600 font-black">0</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Game Canvas Container -->
+              <div class="relative rounded-2xl overflow-hidden border-2 border-black shadow-[4px_4px_0px_#1E1E1E] mb-4 bg-[#E8F0FE] flex justify-center">
+                <canvas id="gameCanvas" width="600" height="400" class="w-full h-auto"></canvas>
+
+                <!-- Game Over Overlay (Hidden initially) -->
+                <div id="gameOverOverlay" class="absolute inset-0 bg-white/95 backdrop-blur-sm hidden flex flex-col items-center justify-center p-6 text-center z-20">
+                  <div class="text-4xl mb-2">🎉</div>
+                  <span class="text-xs font-mono font-bold text-slate-400">GAME OVER</span>
+                  <h4 class="text-3xl font-black text-slate-900 mt-1 mb-1">Awesome Run!</h4>
+                  <p class="text-xs text-slate-600 mb-2">Your Confluence Score:</p>
+                  <div id="gameFinalScore" class="text-5xl font-black text-blue-600 font-mono mb-2">0</div>
+                  <div id="gameRankBadge" class="inline-block px-3 py-1 bg-yellow-300 border border-black rounded-full text-xs font-mono font-bold text-black mb-6">
+                    Prayagraj Tech Hero
+                  </div>
+                  <button id="restartGameBtn" class="neo-btn bg-black text-white font-black text-sm px-6 py-3 rounded-xl border-2 border-black">
+                    PLAY AGAIN 🔄
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-2">
+              <span class="text-xs text-slate-500 font-medium">
+                🎮 Steer with mouse/touch or <strong>[A]/[D] / Arrow Keys</strong>
+              </span>
+              <button id="startGameBtn" class="neo-btn bg-googleYellow hover:bg-yellow-400 font-black text-xs px-5 py-2.5 rounded-xl border-2 border-black shadow-[3px_3px_0px_#1E1E1E]">
+                START GAME ▶️
+              </button>
+            </div>
+          </div>
+
+          <!-- Laptop Sticker Board -->
+          <div class="lg:col-span-5 bg-white rounded-3xl border-3 border-black shadow-[8px_8px_0px_#1E1E1E] p-6 sm:p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-4 border-b-2 border-black mb-4">
+                <div>
+                  <span class="text-[10px] font-mono font-bold text-googleGreen uppercase">INTERACTIVE CUSTOMIZER</span>
+                  <h3 class="text-xl font-black text-slate-900">💻 Decorate Your Laptop</h3>
+                </div>
+                <button id="clearStickersBtn" class="text-xs font-mono font-bold text-red-600 hover:underline">
+                  Clear
+                </button>
+              </div>
+
+              <!-- Virtual Laptop Lid -->
+              <div id="laptopLidBoard" class="w-full h-64 sm:h-72 rounded-2xl border-3 border-black shadow-[4px_4px_0px_#1E1E1E] mb-4 relative">
+                <!-- Center Apple / Pixelbook Logo Emboss -->
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+                  <svg class="w-16 h-16 text-slate-900" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9v-2h2v2zm0-4H9V7h2v5z"/></svg>
+                </div>
+              </div>
+
+              <!-- Sticker Palette -->
+              <label class="block text-xs font-mono font-bold text-slate-600 uppercase mb-2">Click Any Sticker to Place on Lid:</label>
+              <div id="stickerPalette" class="grid grid-cols-5 gap-2 mb-2">
+                <!-- Populated by stickers.js -->
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between pt-3 border-t-2 border-slate-100">
+              <span class="text-xs text-slate-500">Drag to reposition stickers!</span>
+              <button id="presetStickersBtn" class="px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-mono font-bold rounded-lg border border-black">
+                Reset Default
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 11. PASSES & TICKET REGISTRATION -->
+    <section id="tickets" class="py-20 bg-white border-b-2 border-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 bg-pastelRed text-red-900 border border-black rounded-full text-xs font-mono font-bold mb-3">
+            TICKETS & REGISTRATION
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+            Reserve Your DevFest Prayagraj Seat
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            All passes include full-day keynote access, breakout tracks, authentic Awadhi buffet lunch & high tea, official DevFest 2026 T-shirt, and verified certificates.
+          </p>
+
+          <!-- Promo Code Input Bar -->
+          <div class="mt-8 max-w-md mx-auto bg-slate-50 p-2 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#1E1E1E] flex items-center gap-2">
+            <input type="text" id="couponCodeInput" placeholder="PROMO CODE (e.g. PRAYAGRAJ26, SANGAM)" class="px-3 py-2 bg-transparent text-xs font-mono font-bold text-slate-900 uppercase placeholder-slate-400 focus:outline-none flex-1">
+            <button id="applyCouponBtn" class="neo-btn bg-black text-white text-xs font-black px-4 py-2 rounded-xl">
+              APPLY
+            </button>
+          </div>
+          <div id="couponFeedbackMsg" class="hidden"></div>
+        </div>
+
+        <!-- 4 Pricing Tiers -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          
+          <!-- Tier 1: Student Innovator -->
+          <div class="ticket-tier-card bg-white rounded-3xl border-3 border-black shadow-[6px_6px_0px_#4285F4] p-6 flex flex-col justify-between hover:-translate-y-1 transition-all cursor-pointer" data-tier="student">
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span class="px-2.5 py-0.5 bg-blue-100 text-blue-800 border border-blue-400 rounded-full text-[10px] font-mono font-bold">
+                  COLLEGE ID
+                </span>
+                <span class="text-xl">🎓</span>
+              </div>
+              <h3 class="text-xl font-black text-slate-900">Student Innovator</h3>
+              <p class="text-xs text-slate-500 mb-4">For Campus Coders & Students</p>
+              
+              <div class="mb-6">
+                <span class="text-3xl font-black text-slate-900 font-mono" id="price-student">₹199</span>
+                <span class="text-xs text-slate-400 font-semibold line-through ml-1">₹499</span>
+                <span class="block text-[11px] text-green-600 font-bold mt-0.5">60% Subsidized Pass</span>
+              </div>
+
+              <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>Full-day access to all 4 Tracks</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>Official DevFest T-Shirt & Swag</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>Buffet Lunch & High Tea Included</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>Verified Attendance Certificate</span>
+                </li>
+              </ul>
+            </div>
+            <button class="select-ticket-btn w-full neo-btn bg-white hover:bg-slate-50 text-slate-900 font-black py-2.5 rounded-xl border-2 border-black text-xs">
+              Select Student Pass
+            </button>
+          </div>
+
+          <!-- Tier 2: Standard Developer (Featured) -->
+          <div class="ticket-tier-card bg-white rounded-3xl border-3 border-black shadow-[8px_8px_0px_#34A853] p-6 flex flex-col justify-between hover:-translate-y-1 transition-all cursor-pointer relative ring-2 ring-green-600" data-tier="developer">
+            <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-green-500 text-white border-2 border-black rounded-full text-[10px] font-mono font-black uppercase tracking-wider shadow">
+              RECOMMENDED / MOST POPULAR
+            </span>
+            <div>
+              <div class="flex justify-between items-start mb-3 mt-1">
+                <span class="px-2.5 py-0.5 bg-green-100 text-green-800 border border-green-400 rounded-full text-[10px] font-mono font-bold">
+                  STANDARD
+                </span>
+                <span class="text-xl">🚀</span>
+              </div>
+              <h3 class="text-xl font-black text-slate-900">Standard Developer</h3>
+              <p class="text-xs text-slate-500 mb-4">For Working Engineers & Pros</p>
+              
+              <div class="mb-6">
+                <span class="text-3xl font-black text-slate-900 font-mono" id="price-developer">₹399</span>
+                <span class="text-xs text-slate-400 font-semibold line-through ml-1">₹799</span>
+                <span class="block text-[11px] text-green-600 font-bold mt-0.5">Early Bird Rate</span>
+              </div>
+
+              <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>All Student Pass benefits</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>Priority check-in registration</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>Complete DevFest Deluxe Swag Bag</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>Speaker & Recruiter Networking Zone</span>
+                </li>
+              </ul>
+            </div>
+            <button class="select-ticket-btn w-full neo-btn bg-googleGreen hover:bg-green-600 text-white font-black py-2.5 rounded-xl border-2 border-black text-xs shadow-[2px_2px_0px_#1E1E1E]">
+              Book Developer Pass
+            </button>
+          </div>
+
+          <!-- Tier 3: Pro Builder Pass -->
+          <div class="ticket-tier-card bg-white rounded-3xl border-3 border-black shadow-[6px_6px_0px_#FBBC04] p-6 flex flex-col justify-between hover:-translate-y-1 transition-all cursor-pointer" data-tier="pro">
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span class="px-2.5 py-0.5 bg-yellow-100 text-yellow-800 border border-yellow-400 rounded-full text-[10px] font-mono font-bold">
+                  PRO BUILDER
+                </span>
+                <span class="text-xl">⚡</span>
+              </div>
+              <h3 class="text-xl font-black text-slate-900">Pro Builder Pass</h3>
+              <p class="text-xs text-slate-500 mb-4">Tech Leads & Founders</p>
+              
+              <div class="mb-6">
+                <span class="text-3xl font-black text-slate-900 font-mono" id="price-pro">₹699</span>
+                <span class="text-xs text-slate-400 font-semibold line-through ml-1">₹1,299</span>
+                <span class="block text-[11px] text-green-600 font-bold mt-0.5">Fast-Track Pass</span>
+              </div>
+
+              <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>All Standard Developer benefits</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>Reserved front-row keynote seating</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>Commemorative DevFest Hoodie</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>Google Cloud Skill Boost subscription</span>
+                </li>
+              </ul>
+            </div>
+            <button class="select-ticket-btn w-full neo-btn bg-white hover:bg-slate-50 text-slate-900 font-black py-2.5 rounded-xl border-2 border-black text-xs">
+              Select Pro Pass
+            </button>
+          </div>
+
+          <!-- Tier 4: Community VIP Patron -->
+          <div class="ticket-tier-card bg-white rounded-3xl border-3 border-black shadow-[6px_6px_0px_#EA4335] p-6 flex flex-col justify-between hover:-translate-y-1 transition-all cursor-pointer" data-tier="vip">
+            <div>
+              <div class="flex justify-between items-start mb-3">
+                <span class="px-2.5 py-0.5 bg-red-100 text-red-800 border border-red-400 rounded-full text-[10px] font-mono font-bold">
+                  VIP PATRON
+                </span>
+                <span class="text-xl">👑</span>
+              </div>
+              <h3 class="text-xl font-black text-slate-900">Community VIP Patron</h3>
+              <p class="text-xs text-slate-500 mb-4">Limited to 30 Patrons</p>
+              
+              <div class="mb-6">
+                <span class="text-3xl font-black text-slate-900 font-mono" id="price-vip">₹1,299</span>
+                <span class="text-xs text-slate-400 font-semibold line-through ml-1">₹2,499</span>
+                <span class="block text-[11px] text-red-600 font-bold mt-0.5">Exclusive Experience</span>
+              </div>
+
+              <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>All Pro Builder perks</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>Exclusive VIP Dinner with Speakers</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>Commemorative Brass Trophy</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-green-600 font-bold">✓</span>
+                  <span>VIP Concierge Assistance all day</span>
+                </li>
+              </ul>
+            </div>
+            <button class="select-ticket-btn w-full neo-btn bg-googleRed hover:bg-red-600 text-white font-black py-2.5 rounded-xl border-2 border-black text-xs shadow-[2px_2px_0px_#1E1E1E]">
+              Book VIP Pass
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 12. PRAYAGRAJ CONFLUENCE GUIDE & VENUE EXPLORER -->
+    <section id="prayagraj-guide" class="py-20 bg-[#F8F9FA] border-b-2 border-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-3 py-1 bg-pastelGreen text-green-900 border border-black rounded-full text-xs font-mono font-bold mb-3">
+            HERITAGE & TRANSIT GUIDE
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+            The Prayagraj City & Venue Confluence
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            Planning your trip to Prayagraj? Explore venue transit, campus facilities at MNNIT Prayagraj, nearby sacred landmarks, and world-famous local street food.
+          </p>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+          <button class="prayagraj-nav-tab px-5 py-2.5 rounded-xl text-xs font-mono font-bold border-2 border-black bg-black text-white shadow-[3px_3px_0px_#4285F4] transition-all" data-tour="venue">
+            📍 MNNIT GRAND AUDITORIUM
+          </button>
+          <button class="prayagraj-nav-tab px-5 py-2.5 rounded-xl text-xs font-mono font-bold border-2 border-black bg-white text-slate-700 hover:bg-slate-50 transition-all" data-tour="transit">
+            🚆 HOW TO REACH (TRANSIT)
+          </button>
+          <button class="prayagraj-nav-tab px-5 py-2.5 rounded-xl text-xs font-mono font-bold border-2 border-black bg-white text-slate-700 hover:bg-slate-50 transition-all" data-tour="landmarks">
+            🏛️ PRAYAGRAJ HERITAGE
+          </button>
+          <button class="prayagraj-nav-tab px-5 py-2.5 rounded-xl text-xs font-mono font-bold border-2 border-black bg-white text-slate-700 hover:bg-slate-50 transition-all" data-tour="food">
+            🍲 LOCAL FOOD TRAIL
+          </button>
+        </div>
+
+        <!-- Dynamic Content Container -->
+        <div id="prayagrajTourContent">
+          <!-- Populated by prayagraj-tour.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 13. OFFICIAL SWAG & GOODIES -->
+    <section class="py-20 bg-white border-b-2 border-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 bg-pastelYellow text-yellow-900 border border-black rounded-full text-xs font-mono font-bold mb-3">
+            ATTENDEE MERCHANDISE
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+            Exclusive DevFest Prayagraj Swag Kit
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            Every attendee receives our commemorative physical merchandise bag celebrating Prayagraj's developer spirit.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div class="bg-[#F8F9FA] p-6 rounded-3xl border-2 border-black shadow-[4px_4px_0px_#4285F4] flex gap-4 items-start">
+            <div class="w-12 h-12 rounded-2xl bg-blue-100 border border-black flex items-center justify-center text-2xl shrink-0">
+              👕
+            </div>
+            <div>
+              <span class="px-2 py-0.5 bg-blue-100 text-blue-800 rounded text-[10px] font-mono font-bold">ALL PASSES</span>
+              <h4 class="font-black text-base text-slate-900 mt-1 mb-1">Official DevFest '26 T-Shirt</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">100% bio-washed cotton T-shirt featuring exclusive Prayagraj Confluence artwork.</p>
+            </div>
+          </div>
+
+          <div class="bg-[#F8F9FA] p-6 rounded-3xl border-2 border-black shadow-[4px_4px_0px_#34A853] flex gap-4 items-start">
+            <div class="w-12 h-12 rounded-2xl bg-green-100 border border-black flex items-center justify-center text-2xl shrink-0">
+              🏷️
+            </div>
+            <div>
+              <span class="px-2 py-0.5 bg-green-100 text-green-800 rounded text-[10px] font-mono font-bold">ALL PASSES</span>
+              <h4 class="font-black text-base text-slate-900 mt-1 mb-1">Die-Cut Role Stickers</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">Waterproof vinyl stickers including Builder, Developer, Designer, and Sangam motifs.</p>
+            </div>
+          </div>
+
+          <div class="bg-[#F8F9FA] p-6 rounded-3xl border-2 border-black shadow-[4px_4px_0px_#FBBC04] flex gap-4 items-start">
+            <div class="w-12 h-12 rounded-2xl bg-yellow-100 border border-black flex items-center justify-center text-2xl shrink-0">
+              🪪
+            </div>
+            <div>
+              <span class="px-2 py-0.5 bg-yellow-100 text-yellow-800 rounded text-[10px] font-mono font-bold">ALL PASSES</span>
+              <h4 class="font-black text-base text-slate-900 mt-1 mb-1">Custom Lanyard & NFC Pass</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">High-density woven lanyard with dual safety buckle and digital badge pass.</p>
+            </div>
+          </div>
+
+          <div class="bg-[#F8F9FA] p-6 rounded-3xl border-2 border-black shadow-[4px_4px_0px_#EA4335] flex gap-4 items-start">
+            <div class="w-12 h-12 rounded-2xl bg-red-100 border border-black flex items-center justify-center text-2xl shrink-0">
+              🎒
+            </div>
+            <div>
+              <span class="px-2 py-0.5 bg-red-100 text-red-800 rounded text-[10px] font-mono font-bold">PRO & VIP</span>
+              <h4 class="font-black text-base text-slate-900 mt-1 mb-1">Developer Canvas Tote Bag</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">Durable multi-pocket canvas bag suited for 16-inch laptops, chargers, and notebooks.</p>
+            </div>
+          </div>
+
+          <div class="bg-[#F8F9FA] p-6 rounded-3xl border-2 border-black shadow-[4px_4px_0px_#4285F4] flex gap-4 items-start">
+            <div class="w-12 h-12 rounded-2xl bg-blue-100 border border-black flex items-center justify-center text-2xl shrink-0">
+              🍶
+            </div>
+            <div>
+              <span class="px-2 py-0.5 bg-blue-100 text-blue-800 rounded text-[10px] font-mono font-bold">PRO & VIP</span>
+              <h4 class="font-black text-base text-slate-900 mt-1 mb-1">Stainless Steel Water Flask</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">Insulated 750ml flask keeping beverages cold through long technical workshops.</p>
+            </div>
+          </div>
+
+          <div class="bg-[#F8F9FA] p-6 rounded-3xl border-2 border-black shadow-[4px_4px_0px_#34A853] flex gap-4 items-start">
+            <div class="w-12 h-12 rounded-2xl bg-green-100 border border-black flex items-center justify-center text-2xl shrink-0">
+              📜
+            </div>
+            <div>
+              <span class="px-2 py-0.5 bg-green-100 text-green-800 rounded text-[10px] font-mono font-bold">ALL ATTENDEES</span>
+              <h4 class="font-black text-base text-slate-900 mt-1 mb-1">Verified Certificate of Merit</h4>
+              <p class="text-xs text-slate-600 leading-relaxed">Cryptographically signed digital credential to showcase on your LinkedIn & resume.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 14. ORGANIZERS & CORE TEAM -->
+    <section id="team" class="py-20 bg-[#F8F9FA] border-b-2 border-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 bg-pastelBlue text-blue-900 border border-black rounded-full text-xs font-mono font-bold mb-3">
+            THE COMMUNITY ENGINE
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+            Meet the GDG Prayagraj Team
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            The passionate organizers, track leads, and volunteers who dedicate hundreds of hours to make DevFest Prayagraj a reality.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+          
+          <!-- Ankit Kumar Verma -->
+          <div class="bg-white p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#4285F4] text-center hover:-translate-y-1 transition-transform">
+            <div class="w-24 h-24 mx-auto mb-3 rounded-full border-3 border-black overflow-hidden bg-slate-50">
+              <img src="assets/team/ankit-verma.svg" alt="Ankit Kumar Verma" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-black text-base text-slate-900 leading-snug">Ankit Kumar Verma</h4>
+            <p class="text-xs font-bold text-googleBlue mb-1">Lead Organizer</p>
+            <span class="text-[10px] font-mono text-slate-400">GDG Prayagraj</span>
+          </div>
+
+          <!-- Hridyesh Gupta -->
+          <div class="bg-white p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#34A853] text-center hover:-translate-y-1 transition-transform">
+            <div class="w-24 h-24 mx-auto mb-3 rounded-full border-3 border-black overflow-hidden bg-slate-50">
+              <img src="assets/team/hridyesh-gupta.svg" alt="Hridyesh Gupta" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-black text-base text-slate-900 leading-snug">Hridyesh Gupta</h4>
+            <p class="text-xs font-bold text-googleGreen mb-1">Co-Organizer</p>
+            <span class="text-[10px] font-mono text-slate-400">GDG Prayagraj</span>
+          </div>
+
+          <!-- Agamya Samuel -->
+          <div class="bg-white p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#FBBC04] text-center hover:-translate-y-1 transition-transform">
+            <div class="w-24 h-24 mx-auto mb-3 rounded-full border-3 border-black overflow-hidden bg-slate-50">
+              <img src="assets/team/agamya-samuel.svg" alt="Agamya Samuel" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-black text-base text-slate-900 leading-snug">Agamya Samuel</h4>
+            <p class="text-xs font-bold text-googleYellowDark mb-1">Web & Dev Lead</p>
+            <span class="text-[10px] font-mono text-slate-400">GDG Prayagraj</span>
+          </div>
+
+          <!-- Aditya Kumar -->
+          <div class="bg-white p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#EA4335] text-center hover:-translate-y-1 transition-transform">
+            <div class="w-24 h-24 mx-auto mb-3 rounded-full border-3 border-black overflow-hidden bg-slate-50">
+              <img src="assets/team/aditya-kumar.svg" alt="Aditya Kumar" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-black text-base text-slate-900 leading-snug">Aditya Kumar</h4>
+            <p class="text-xs font-bold text-googleRed mb-1">Core Team Lead</p>
+            <span class="text-[10px] font-mono text-slate-400">GDG Prayagraj</span>
+          </div>
+
+          <!-- Sarthak Singh -->
+          <div class="bg-white p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#4285F4] text-center hover:-translate-y-1 transition-transform">
+            <div class="w-24 h-24 mx-auto mb-3 rounded-full border-3 border-black overflow-hidden bg-slate-50">
+              <img src="assets/team/sarthak-singh.svg" alt="Sarthak Singh" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-black text-base text-slate-900 leading-snug">Sarthak Singh</h4>
+            <p class="text-xs font-bold text-googleBlue mb-1">Operations Lead</p>
+            <span class="text-[10px] font-mono text-slate-400">GDG Prayagraj</span>
+          </div>
+
+          <!-- Mohd Shadab -->
+          <div class="bg-white p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#34A853] text-center hover:-translate-y-1 transition-transform">
+            <div class="w-24 h-24 mx-auto mb-3 rounded-full border-3 border-black overflow-hidden bg-slate-50">
+              <img src="assets/team/mohd-shadab.svg" alt="Mohd Shadab" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-black text-base text-slate-900 leading-snug">Mohd Shadab</h4>
+            <p class="text-xs font-bold text-googleGreen mb-1">Technical Lead</p>
+            <span class="text-[10px] font-mono text-slate-400">GDG Prayagraj</span>
+          </div>
+
+          <!-- Anshuman Rai -->
+          <div class="bg-white p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#FBBC04] text-center hover:-translate-y-1 transition-transform">
+            <div class="w-24 h-24 mx-auto mb-3 rounded-full border-3 border-black overflow-hidden bg-slate-50">
+              <img src="assets/team/anshuman-rai.svg" alt="Anshuman Rai" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-black text-base text-slate-900 leading-snug">Anshuman Rai</h4>
+            <p class="text-xs font-bold text-googleYellowDark mb-1">Creative Lead</p>
+            <span class="text-[10px] font-mono text-slate-400">GDG Prayagraj</span>
+          </div>
+
+          <!-- Manvi Kesarwani -->
+          <div class="bg-white p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#EA4335] text-center hover:-translate-y-1 transition-transform">
+            <div class="w-24 h-24 mx-auto mb-3 rounded-full border-3 border-black overflow-hidden bg-slate-50">
+              <img src="assets/team/manvi-kesarwani.svg" alt="Manvi Kesarwani" class="w-full h-full object-cover">
+            </div>
+            <h4 class="font-black text-base text-slate-900 leading-snug">Manvi Kesarwani</h4>
+            <p class="text-xs font-bold text-googleRed mb-1">Community & WTM Lead</p>
+            <span class="text-[10px] font-mono text-slate-400">GDG Prayagraj</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 15. SPONSORS & COMMUNITY PARTNERS -->
+    <section class="py-20 bg-white border-b-2 border-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 bg-pastelGreen text-green-900 border border-black rounded-full text-xs font-mono font-bold mb-3">
+            BACKED BY INDUSTRY & ACADEMIA
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+            Partners & Sponsors
+          </h2>
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+            Proudly supported by Google Developers, global software ecosystems, and Eastern UP's leading academic institutions.
+          </p>
+        </div>
+
+        <!-- Title Sponsor -->
+        <div class="max-w-md mx-auto mb-12 text-center">
+          <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest block mb-3">TITLE SPONSOR</span>
+          <div class="bg-slate-50 p-6 rounded-3xl border-2 border-black shadow-[6px_6px_0px_#1E1E1E] flex justify-center items-center">
+            <img src="assets/sponsors/google-developers.svg" alt="Google Developers" class="h-12 w-auto object-contain">
+          </div>
+        </div>
+
+        <!-- Ecosystem & Tech Partners -->
+        <div class="mb-12">
+          <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest block text-center mb-4">TECHNOLOGY & PLATFORM PARTNERS</span>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div class="bg-slate-50 p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#1E1E1E] flex justify-center items-center">
+              <img src="assets/sponsors/google-cloud.svg" alt="Google Cloud" class="h-10 w-auto object-contain">
+            </div>
+            <div class="bg-slate-50 p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#1E1E1E] flex justify-center items-center">
+              <img src="assets/sponsors/github.svg" alt="GitHub" class="h-10 w-auto object-contain">
+            </div>
+            <div class="bg-slate-50 p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#1E1E1E] flex justify-center items-center">
+              <img src="assets/sponsors/jetbrains.svg" alt="JetBrains" class="h-10 w-auto object-contain">
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic & Campus Chapters -->
+        <div>
+          <span class="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-widest block text-center mb-4">HOST & CAMPUS PARTNERS</span>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div class="bg-slate-50 p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#1E1E1E] flex justify-center items-center">
+              <img src="assets/sponsors/mnnit.svg" alt="MNNIT Prayagraj Host & Venue" class="h-10 w-auto object-contain">
+            </div>
+            <div class="bg-slate-50 p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#1E1E1E] flex justify-center items-center">
+              <img src="assets/sponsors/iiit-allahabad.svg" alt="GDG on Campus IIIT Allahabad" class="h-10 w-auto object-contain">
+            </div>
+            <div class="bg-slate-50 p-5 rounded-2xl border-2 border-black shadow-[4px_4px_0px_#1E1E1E] flex justify-center items-center">
+              <img src="assets/sponsors/uit-prayagraj.svg" alt="GDG UIT Prayagraj" class="h-10 w-auto object-contain">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 16. FREQUENTLY ASKED QUESTIONS -->
+    <section id="faqs" class="py-20 bg-[#F8F9FA] border-b-2 border-black">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="inline-block px-3 py-1 bg-pastelRed text-red-900 border border-black rounded-full text-xs font-mono font-bold mb-3">
+            GOT QUESTIONS?
+          </span>
+          <h2 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-base text-slate-600">
+            Everything you need to know about tickets, hands-on codelabs, logistics, and Prayagraj venue guidelines.
+          </p>
+        </div>
+
+        <!-- FAQ Container (Populated by main.js) -->
+        <div id="faqContainer" class="space-y-4">
+          <!-- Populated by JS -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 17. FOOTER -->
+  <footer class="bg-[#1E1E1E] text-white pt-16 pb-12 border-t-4 border-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        
+        <!-- Left Brand & Mission -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-lg bg-googleBlue flex items-center justify-center font-bold text-white font-mono">
+              DF
+            </span>
+            <div class="font-black text-lg text-white">DEVFEST PRAYAGRAJ 2026</div>
+          </div>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm">
+            Organized with community passion by <strong>Google Developer Group (GDG) Prayagraj</strong>. DevFest is an independent developer conference powered by local chapters across the globe.
+          </p>
+          <div class="pt-2 text-xs font-mono text-slate-400">
+            📍 Motilal Nehru National Institute of Technology (MNNIT) MP Hall, Teliarganj, Prayagraj, UP (211004)
+          </div>
+        </div>
+
+        <!-- Middle Quick Links -->
+        <div class="md:col-span-3 space-y-2">
+          <div class="text-xs font-mono font-bold text-googleYellow uppercase tracking-wider mb-2">QUICK NAVIGATION</div>
+          <ul class="space-y-1.5 text-xs text-slate-300 font-medium">
+            <li><a href="#about" class="hover:text-white transition-colors">About Triveni Sangam Confluence</a></li>
+            <li><a href="#tracks" class="hover:text-white transition-colors">4 Technical Tracks</a></li>
+            <li><a href="#speakers" class="hover:text-white transition-colors">Rockstar Speakers & GDEs</a></li>
+            <li><a href="#schedule" class="hover:text-white transition-colors">Full Day Timeline</a></li>
+            <li><a href="#badge-studio" class="hover:text-white transition-colors">Interactive Badge Studio</a></li>
+            <li><a href="#prayagraj-guide" class="hover:text-white transition-colors">Prayagraj Transit & Food</a></li>
+            <li><a href="#tickets" class="hover:text-white transition-colors">Passes & Student Discount</a></li>
+          </ul>
+        </div>
+
+        <!-- Right Community Links & Newsletter -->
+        <div class="md:col-span-4 space-y-4">
+          <div class="text-xs font-mono font-bold text-googleGreen uppercase tracking-wider mb-2">STAY IN TOUCH</div>
+          <p class="text-xs text-slate-400">
+            Subscribe for DevFest Prayagraj updates, speaker announcements, and Codelab prereqs.
+          </p>
+          <form onsubmit="event.preventDefault(); alert('🎉 Thank you for subscribing to GDG Prayagraj newsletter!');" class="flex gap-2">
+            <input type="email" placeholder="Your email address" required class="px-3 py-2 bg-slate-900 border border-slate-700 rounded-xl text-xs text-white placeholder-slate-500 focus:outline-none focus:border-googleBlue flex-1">
+            <button type="submit" class="neo-btn bg-googleBlue hover:bg-blue-600 text-white font-bold text-xs px-4 py-2 rounded-xl">
+              Join
+            </button>
+          </form>
+
+          <!-- Social Handles -->
+          <div class="flex items-center gap-2 pt-2">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-googleBlue flex items-center justify-center text-xs text-white transition-colors" title="LinkedIn">
+              in
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-black flex items-center justify-center text-xs text-white transition-colors" title="Twitter/X">
+              𝕏
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 flex items-center justify-center text-xs text-white transition-colors" title="GitHub">
+              gh
+            </a>
+            <a href="https://gdg.community.dev" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-googleGreen flex items-center justify-center text-xs text-white transition-colors" title="GDG Bevy">
+              gdg
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Disclaimer & Code of Conduct -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          © 2026 Google Developer Group (GDG) Prayagraj. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://developers.google.com/community-guidelines" target="_blank" rel="noopener" class="hover:text-slate-300 transition-colors">
+            Community Guidelines
+          </a>
+          <span>•</span>
+          <a href="https://devfest.withgoogle.com" target="_blank" rel="noopener" class="hover:text-slate-300 transition-colors">
+            DevFest Global
+          </a>
+          <span>•</span>
+          <a href="#" class="hover:text-slate-300 transition-colors">
+            Code of Conduct
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- 18. MODALS -->
+
+  <!-- Speaker Details Modal -->
+  <div id="speakerModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl border-3 border-black shadow-[10px_10px_0px_#1E1E1E] max-w-lg w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto">
+      <button id="closeSpeakerModalBtn" class="absolute top-5 right-5 w-8 h-8 rounded-full border-2 border-black bg-slate-100 hover:bg-red-500 hover:text-white font-bold flex items-center justify-center transition-colors">
+        ✕
+      </button>
+      <div class="flex items-center gap-4 mb-5">
+        <div class="w-20 h-20 rounded-full border-3 border-black overflow-hidden bg-slate-100 shrink-0">
+          <img id="modalSpeakerAvatar" src="" alt="Speaker" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <span id="modalSpeakerTag" class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold text-white mb-1">
+            KEYNOTE
+          </span>
+          <h3 id="modalSpeakerName" class="text-2xl font-black text-slate-900 leading-tight"></h3>
+          <p id="modalSpeakerRole" class="text-xs font-bold text-slate-600"></p>
+        </div>
+      </div>
+      <div class="p-3 bg-slate-50 rounded-2xl border-2 border-black mb-4">
+        <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">SESSION TOPIC</span>
+        <h4 id="modalSpeakerTopic" class="text-sm font-black text-slate-900 mt-0.5"></h4>
+      </div>
+      <div class="space-y-2 mb-6">
+        <span class="text-[10px] font-mono font-bold text-slate-400 uppercase">BIOGRAPHY</span>
+        <p id="modalSpeakerBio" class="text-xs sm:text-sm text-slate-700 leading-relaxed"></p>
+      </div>
+      <div class="pt-4 border-t-2 border-slate-100 flex justify-end">
+        <button onclick="document.getElementById('speakerModal').classList.add('hidden')" class="neo-btn bg-black text-white font-bold text-xs px-5 py-2.5 rounded-xl border-2 border-black">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Registration Checkout Modal -->
+  <div id="checkoutModal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl border-3 border-black shadow-[10px_10px_0px_#1E1E1E] max-w-md w-full overflow-hidden relative">
+      <button id="closeCheckoutModalBtn" class="absolute top-5 right-5 w-8 h-8 rounded-full border-2 border-black bg-slate-100 hover:bg-red-500 hover:text-white font-bold flex items-center justify-center transition-colors z-10">
+        ✕
+      </button>
+
+      <!-- Form Step -->
+      <div id="checkoutFormStep" class="p-6 sm:p-8">
+        <div class="mb-4">
+          <span class="px-2.5 py-0.5 bg-blue-100 text-blue-800 border border-blue-400 rounded-full text-[10px] font-mono font-bold">
+            EVENT REGISTRATION
+          </span>
+          <h3 class="text-2xl font-black text-slate-900 mt-1" id="modalTierTitle">Standard Developer Pass</h3>
+          <div class="text-lg font-black text-blue-600 font-mono mt-0.5" id="modalTierPrice">Total: ₹399</div>
+        </div>
+
+        <form id="checkoutForm" class="space-y-3.5">
+          <div>
+            <label class="block text-xs font-mono font-bold text-slate-700 uppercase mb-1">Your Full Name *</label>
+            <input type="text" id="checkoutName" required placeholder="e.g. Rahul Sharma" class="w-full px-3.5 py-2 bg-slate-50 border-2 border-black rounded-xl text-xs font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label class="block text-xs font-mono font-bold text-slate-700 uppercase mb-1">Email Address *</label>
+            <input type="email" id="checkoutEmail" required placeholder="rahul@example.com" class="w-full px-3.5 py-2 bg-slate-50 border-2 border-black rounded-xl text-xs font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label class="block text-xs font-mono font-bold text-slate-700 uppercase mb-1">College or Company Name</label>
+            <input type="text" id="checkoutOrg" placeholder="e.g. MNNIT Prayagraj / IIIT / TCS" class="w-full px-3.5 py-2 bg-slate-50 border-2 border-black rounded-xl text-xs font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-mono font-bold text-slate-700 uppercase mb-1">T-Shirt Size</label>
+              <select id="checkoutTshirt" class="w-full px-3 py-2 bg-slate-50 border-2 border-black rounded-xl text-xs font-bold text-slate-900 focus:outline-none">
+                <option value="S">S (Small)</option>
+                <option value="M" selected>M (Medium)</option>
+                <option value="L">L (Large)</option>
+                <option value="XL">XL (Extra Large)</option>
+                <option value="XXL">XXL</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-mono font-bold text-slate-700 uppercase mb-1">Buffet Meal</label>
+              <select id="checkoutFood" class="w-full px-3 py-2 bg-slate-50 border-2 border-black rounded-xl text-xs font-bold text-slate-900 focus:outline-none">
+                <option value="veg">Vegetarian</option>
+                <option value="jain">Jain Special</option>
+                <option value="nonveg">Non-Veg</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="pt-2">
+            <button type="submit" class="w-full neo-btn bg-googleYellow hover:bg-yellow-400 text-slate-900 font-black py-3 rounded-xl border-2 border-black text-sm shadow-[3px_3px_0px_#1E1E1E] transition-all">
+              COMPLETE RESERVATION 🚀
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Success Step (Dynamically rendered by tickets.js) -->
+      <div id="checkoutSuccessStep" class="hidden"></div>
+    </div>
+  </div>
+
+  <!-- APPLICATION JAVASCRIPT FILES -->
+  <script src="js/data.js"></script>
+  <script src="js/badge-generator.js"></script>
+  <script src="js/mini-game.js"></script>
+  <script src="js/stickers.js"></script>
+  <script src="js/schedule.js"></script>
+  <script src="js/tickets.js"></script>
+  <script src="js/prayagraj-tour.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
