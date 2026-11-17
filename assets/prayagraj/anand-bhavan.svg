@@ -1,0 +1,29 @@
+<svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky -->
+  <rect width="400" height="250" fill="#E8F0FE"/>
+  <!-- Lush Gardens -->
+  <rect x="0" y="190" width="400" height="60" fill="#A5D6A7"/>
+  <path d="M20 190 Q 30 175 40 190 M50 190 Q 60 170 70 190 M330 190 Q 340 170 350 190 M360 190 Q 370 175 380 190" stroke="#34A853" stroke-width="3" fill="none"/>
+  <!-- Mansion Architecture -->
+  <!-- Main building base -->
+  <rect x="70" y="100" width="260" height="90" fill="#FFFFFF" stroke="#1E1E1E" stroke-width="3"/>
+  <!-- Classical Pillars -->
+  <rect x="90" y="120" width="12" height="70" fill="#E0E0E0" stroke="#1E1E1E" stroke-width="2"/>
+  <rect x="120" y="120" width="12" height="70" fill="#E0E0E0" stroke="#1E1E1E" stroke-width="2"/>
+  <rect x="268" y="120" width="12" height="70" fill="#E0E0E0" stroke="#1E1E1E" stroke-width="2"/>
+  <rect x="298" y="120" width="12" height="70" fill="#E0E0E0" stroke="#1E1E1E" stroke-width="2"/>
+  <!-- Entrance Arch -->
+  <path d="M170 190 L170 145 C 170 130 230 130 230 145 L230 190 Z" fill="#4285F4" stroke="#1E1E1E" stroke-width="2"/>
+  <!-- Second Floor / Balcony -->
+  <rect x="90" y="80" width="220" height="25" fill="#F8F9FA" stroke="#1E1E1E" stroke-width="2.5"/>
+  <line x1="90" y1="88" x2="310" y2="88" stroke="#EA4335" stroke-width="2"/>
+  <!-- Iconic Center Dome & Clock Tower of Anand Bhavan -->
+  <path d="M165 80 C 165 45 235 45 235 80 Z" fill="#FBBC04" stroke="#1E1E1E" stroke-width="3"/>
+  <line x1="200" y1="45" x2="200" y2="30" stroke="#1E1E1E" stroke-width="2"/>
+  <polygon points="200,30 215,35 200,40" fill="#EA4335"/>
+  <!-- Windows -->
+  <rect x="100" y="130" width="15" height="22" rx="7" fill="#4285F4" stroke="#1E1E1E" stroke-width="1.5"/>
+  <rect x="285" y="130" width="15" height="22" rx="7" fill="#34A853" stroke="#1E1E1E" stroke-width="1.5"/>
+  <!-- Frame Border -->
+  <rect x="2" y="2" width="396" height="246" stroke="#1E1E1E" stroke-width="4" rx="12" fill="none"/>
+</svg>

@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Sky -->
+  <rect width="400" height="250" fill="#E8F0FE"/>
+  <!-- Sun -->
+  <circle cx="320" cy="60" r="30" fill="#FBBC04" opacity="0.8"/>
+  <circle cx="320" cy="60" r="38" stroke="#FBBC04" stroke-width="2" stroke-dasharray="6,4" fill="none"/>
+  <!-- Flying seagulls -->
+  <path d="M100 45 Q 105 40 110 45 Q 115 40 120 45" stroke="#1E1E1E" stroke-width="2" fill="none"/>
+  <path d="M130 35 Q 134 31 138 35 Q 142 31 146 35" stroke="#1E1E1E" stroke-width="1.8" fill="none"/>
+  <path d="M80 60 Q 84 56 88 60 Q 92 56 96 60" stroke="#1E1E1E" stroke-width="1.5" fill="none"/>
+  
+  <!-- Temple Spires on Ghat -->
+  <polygon points="50,140 65,70 80,140" fill="#EA4335"/>
+  <polygon points="62,70 68,70 65,55" fill="#FBBC04"/>
+  <polygon points="90,140 105,85 120,140" fill="#F9AB00"/>
+  <polygon points="102,85 108,85 105,72" fill="#EA4335"/>
+  <rect x="40" y="140" width="90" height="30" fill="#D7CCC8"/>
+  
+  <!-- Ghat Stone Steps -->
+  <rect x="0" y="160" width="400" height="8" fill="#BCAAA4"/>
+  <rect x="0" y="168" width="400" height="8" fill="#A1887F"/>
+  <rect x="0" y="176" width="400" height="10" fill="#8D6E63"/>
+  
+  <!-- Sangam Confluence Waters -->
+  <rect x="0" y="186" width="400" height="64" fill="#81D4FA"/>
+  <path d="M0 196 Q 100 190 200 196 T 400 196" stroke="#4285F4" stroke-width="3" fill="none"/>
+  <path d="M0 212 Q 100 206 200 212 T 400 212" stroke="#34A853" stroke-width="3" stroke-dasharray="10,6" fill="none"/>
+  <path d="M0 228 Q 100 222 200 228 T 400 228" stroke="#FBBC04" stroke-width="2.5" stroke-dasharray="8,6" fill="none"/>
+  
+  <!-- Sangam Wooden Boat with Flag -->
+  <g transform="translate(220, 180)">
+    <path d="M0 16 C 20 16 70 16 90 16 C 80 30 15 30 0 16 Z" fill="#6D4C41" stroke="#3E2723" stroke-width="2"/>
+    <line x1="45" y1="16" x2="45" y2="-12" stroke="#3E2723" stroke-width="3"/>
+    <polygon points="45,-10 75,4 45,4" fill="#4285F4"/>
+    <polygon points="45,4 68,14 45,14" fill="#EA4335"/>
+    <circle cx="28" cy="12" r="5" fill="#3DDC84"/>
+  </g>
+  <!-- Frame Border -->
+  <rect x="2" y="2" width="396" height="246" stroke="#1E1E1E" stroke-width="4" rx="12" fill="none"/>
+</svg>
