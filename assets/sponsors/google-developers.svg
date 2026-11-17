@@ -1,0 +1,8 @@
+<svg viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 30c-2.4 2.5-6.2 2.5-8.6 0L4.9 21.5c-2.3-2.3-2.3-6.1 0-8.4 2.3-2.3 6.1-2.3 8.4 0l8.7 8.5c2.4 2.4 2.4 6.2 0 8.4z" fill="#4285F4"/>
+  <path d="M41 30c2.4 2.5 6.2 2.5 8.6 0l8.5-8.5c2.3-2.3 2.3-6.1 0-8.4-2.3-2.3-6.1-2.3-8.4 0l-8.7 8.5c-2.4 2.4-2.4 6.2 0 8.4z" fill="#EA4335"/>
+  <path d="M31.5 15.4c-2.4-2.4-6.2-2.4-8.6 0l-8.5 8.5c-2.3 2.3-2.3 6.1 0 8.4 2.3 2.3 6.1 2.3 8.4 0l8.7-8.5c2.4-2.4 2.4-6.2 0-8.4z" fill="#FBBC04"/>
+  <path d="M22.9 30c2.4 2.4 6.2 2.4 8.6 0l8.5-8.5c2.3-2.3 2.3-6.1 0-8.4-2.3-2.3-6.1-2.3-8.4 0l-8.7 8.5c-2.4 2.4-2.4 6.2 0 8.4z" fill="#34A853"/>
+  <text x="68" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="16" fill="#1E1E1E">Google</text>
+  <text x="68" y="46" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="12" fill="#5F6368">Developers</text>
+</svg>

@@ -1,0 +1,17 @@
+# Large raw deliverables and source presentations (>100MB exceeds GitHub limits)
+Deliverables/
+*.pptx
+*.ai
+*.aep
+
+# Python & OS artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/

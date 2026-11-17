@@ -1,0 +1,200 @@
+/**
+ * DevFest Prayagraj 2026 - Custom Styles & Neo-Brutalist Theme
+ * Brand standard: Google Light Palette, Neo-Brutalist 2px/3px borders, Playful Tech Aesthetics.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Roboto+Mono:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --google-blue: #4285F4;
+  --google-green: #34A853;
+  --google-yellow: #FBBC04;
+  --google-yellow-dark: #F9AB00;
+  --google-red: #EA4335;
+  
+  --halftone-blue: #57CAFF;
+  --halftone-green: #5CDB6D;
+  --halftone-yellow: #FFD427;
+  --halftone-red: #FF7DAF;
+  
+  --pastel-blue: #C3ECF6;
+  --pastel-green: #CCF6C5;
+  --pastel-yellow: #FFE7A5;
+  --pastel-red: #F8D8D8;
+  
+  --off-white: #F8F9FA;
+  --card-bg: #FFFFFF;
+  --black-border: #1E1E1E;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #F8F9FA;
+  color: #1E1E1E;
+  overflow-x: hidden;
+  background-image: radial-gradient(#E2E8F0 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+code, .font-mono {
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--google-yellow);
+  color: #1E1E1E;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F3F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E1E1E;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--google-blue);
+}
+
+/* Neo-Brutalist Core Utilities */
+.neo-border {
+  border: 2px solid var(--black-border);
+}
+
+.neo-border-3 {
+  border: 3px solid var(--black-border);
+}
+
+.neo-shadow {
+  box-shadow: 4px 4px 0px var(--black-border);
+}
+
+.neo-shadow-lg {
+  box-shadow: 6px 6px 0px var(--black-border);
+}
+
+.neo-shadow-blue {
+  box-shadow: 6px 6px 0px var(--google-blue);
+}
+
+.neo-shadow-green {
+  box-shadow: 6px 6px 0px var(--google-green);
+}
+
+.neo-shadow-yellow {
+  box-shadow: 6px 6px 0px var(--google-yellow);
+}
+
+.neo-shadow-red {
+  box-shadow: 6px 6px 0px var(--google-red);
+}
+
+.neo-btn {
+  border: 2px solid var(--black-border);
+  box-shadow: 3px 3px 0px var(--black-border);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neo-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px var(--black-border);
+}
+
+.neo-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px var(--black-border);
+}
+
+/* Continuous Marquee Ribbon */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marqueeScroll 25s linear infinite;
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Subtle Floating Animations */
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+.animate-float {
+  animation: floatGentle 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatGentle 4.5s ease-in-out 1.5s infinite;
+}
+
+/* Bridge Cable Pulse Animation */
+@keyframes cableGlow {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; filter: drop-shadow(0 0 3px rgba(66, 133, 244, 0.8)); }
+}
+
+.cable-pulse {
+  animation: cableGlow 3s ease-in-out infinite;
+}
+
+/* River Wave Flow Animation */
+@keyframes waveShift {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 40; }
+}
+
+.wave-flow {
+  animation: waveShift 2s linear infinite;
+}
+
+/* Badge Canvas Responsive Preview */
+#badgeCanvas {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 6px 6px 0px #1E1E1E;
+  border-radius: 20px;
+}
+
+/* Game Canvas */
+#gameCanvas {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  background-color: #E8F0FE;
+}
+
+/* Laptop Lid Board */
+#laptopLidBoard {
+  background: linear-gradient(135deg, #E2E8F0 0%, #CBD5E1 100%);
+  border: 3px solid #1E1E1E;
+  box-shadow: 8px 8px 0px #1E1E1E;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Line Clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
